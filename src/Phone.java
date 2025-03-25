@@ -1,9 +1,9 @@
 // унаследуйте класс от базового класса, описывающего контакт Contact
-class Phone ... {
+class Phone extends Contact {
 private final String phoneNumber;
 
 public Phone(String name, String phoneNumber) {
-        ...
+    super();
     this.phoneNumber = phoneNumber;
 }
 

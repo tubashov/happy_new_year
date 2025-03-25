@@ -1,9 +1,9 @@
-mport java.util.Scanner;
+import java.util.Scanner;
 
 public class Practicum {
 
     // дополните объявление поля friendsContactBook, которое будет хранить в себе список номеров телефонов друзей
-    private static ContactBook... friendsContactBook = ...
+    private static ContactBook ArrayList friendsContactBook = ...
             // напишите объявления полей colleaguesContactBook, classmatesContactBook и relativesContactBook,
             // которые будут хранить списки электронных адресов, соцсетей и почтовых адресов соответственно
             ...

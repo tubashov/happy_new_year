@@ -1,5 +1,5 @@
 // ограничьте класс ContactBook так, чтобы он мог хранить в себе только список контактов
-class ContactBook ... {
+class ContactBook<T extends Contact> {
         // объявите поле класса contacts — список контактов книги
         ...
 

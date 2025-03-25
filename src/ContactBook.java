@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 // ограничьте класс ContactBook так, чтобы он мог хранить в себе только список контактов
 class ContactBook<T extends Contact> {
         // объявите поле класса contacts — список контактов книги
-        ArrayList<T> Contacts;
+        ArrayList<T> contacts;
 
 public void addContact(T contact) {
     contacts.add(contact);
@@ -9,9 +11,10 @@ public void addContact(T contact) {
 
 public void printList() {
     // выведите на экран весь список контактов книги
-        ...
-    System.out.println("Имя: " + contact.getName());
-    contact.print();
+    for(T contact : contacts) {
+        System.out.println("Имя: " + contact.getName());
+        contact.print();
+    }
 }
 
 public void congratulate(String name) {

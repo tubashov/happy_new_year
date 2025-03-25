@@ -4,7 +4,7 @@ public class Address extends Contact {
     private final String address;
 
     public Address(String name, String city, String address) {
-        super();
+        super(name);
         this.city = city;
         this.address = address;
     }
@@ -18,8 +18,7 @@ public class Address extends Contact {
     }
 
 // метод sendMessage переопределяет метод базового класса
-    ...
-
+    @Override
     public void sendMessage() {
         System.out.println("Отправим открытку в город " + city + " по адресу: " + address);
     }
