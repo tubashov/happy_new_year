@@ -1,5 +1,5 @@
 // унаследуйте класс от базового класса, описывающего контакт Contact
-public class Address extends Contact {
+class Address extends ContactBook {
     private final String city;
     private final String address;
 
@@ -16,14 +16,13 @@ public class Address extends Contact {
     public String getAddress() {
         return address;
     }
-
 // метод sendMessage переопределяет метод базового класса
-    @Override
+
     public void sendMessage() {
         System.out.println("Отправим открытку в город " + city + " по адресу: " + address);
     }
 
-    ...
+
 
     public void print() {
         System.out.println("Город: " + getCity());

@@ -1,28 +1,25 @@
-// ограничьте класс ContactBook так, чтобы он мог хранить в себе только список контактов
-class ContactBook<T extends Contact> {
-        // объявите поле класса contacts — список контактов книги
-        ...
+import java.util.List;
+// унаследуйте класс от базового класса, описывающего контакт Contact
+class Email extends ContactBook {
+private final String email;
 
-public void addContact(... contact) {
-    contacts.add(contact);
+public Email(String name, String email) {
+        super(name);
+    this.email = email;
 }
 
-public void printList() {
-    // выведите на экран весь список контактов книги
-        ...
-    System.out.println("Имя: " + contact.getName());
-    contact.print();
+public String getEmail() {
+    return email;
 }
 
-public void congratulate(String name) {
-    boolean contactPresented = false; // проверяем, есть ли контакт в базе
-    // найдите контакт в книге по имени и отправьте ему сообщение с помощью метода sendMessage()
-        ...
-    System.out.println("Поздравим с Новым годом ваш контакт из записной книжки: " + name);
-    contact.sendMessage();
+    // метод sendMessage переопределяет метод базового класса
 
-    // если контакт не найден, выведите соответствующее сообщение
-    System.out.println("Не найден контакт с указанным именем.");
-}
+    public void sendMessage() {
+        System.out.println("Отправим новогоднюю картинку коллеге на электронную почту " + email);
+    }
 
+
+    public void print() {
+        System.out.println("Email: " + getEmail());
+    }
 }
